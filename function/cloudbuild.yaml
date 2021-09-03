@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - yourgreatfunction
+  - --region=us-central1
+  - --source=./function/10-1/
+  - --trigger-http
+  - --runtime=python39
