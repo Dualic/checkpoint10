@@ -2,15 +2,15 @@ steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
   dir: run/10-2
-  args: ['build', '-t', 'gcr.io/checkpoint-ip/10-2', '.']
+  args: ['build', '-t', 'gcr.io/checkpoint-ip/102', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   dir: run/10-2
-  args: ['push', 'gcr.io/checkpoint-ip/10-2']
+  args: ['push', 'gcr.io/checkpoint-ip/102']
 # Deploy container image to Cloud Run
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   dir: run/10-2
   entrypoint: gcloud
-  args: ['run', 'deploy', '10-2', '--image', 'gcr.io/checkpoint-ip/10-2', '--region', 'us-central1']
+  args: ['run', 'deploy', '102', '--image', 'gcr.io/checkpoint-ip/102', '--region', 'us-central1']
 images:
-- gcr.io/checkpoint-ip/10-2
+- gcr.io/checkpoint-ip/102
