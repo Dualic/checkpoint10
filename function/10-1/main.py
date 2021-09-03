@@ -1,2 +1,2 @@
 def yourgreatfunction(request):
-    return "This is your better, updated function"
+    return "This is your new and improved function"
