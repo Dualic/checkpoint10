@@ -11,6 +11,6 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   dir: run/10-2
   entrypoint: gcloud
-  args: ['run', 'deploy', 'cp102', '--image', 'gcr.io/checkpoint-ip/cp102', '--region', 'us-central1', '--port', '80']
+  args: ['run', 'deploy', 'cp102', '--image', 'gcr.io/checkpoint-ip/cp102', '--region', 'us-central1', '--port', '80', '--allow-unauthenticated']
 images:
 - gcr.io/checkpoint-ip/cp102
